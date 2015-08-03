@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../lib/jquery-1.11.1.min.js"></script>
+    <script src="../js/serializeTest.js"></script>
+    <script src="../js/serializeArrayTest.js"></script>
+
+</head>
+<body>
+<H1>jquery 序列化 .param(object,traditional)函数，.serialize()函数，.serializeArray()函数</H1>
+<h2>第一种   plain object  简单对象</h2>
+<p>{one: 1, two: 2, three: 3}</p>
+<p>{a: {one: 1, two: 2, three: 3}}</p>
+<p>----------------------------------------</p>
+
+<h2>第二种   array  数组</h2>
+<p>{ a: [ 2, 3, 4 ] }</p>
+<p>{ [ 2, 3, 4 ] }</p>
+<p>-----------------------------------------</p>
+
+<h3> 复杂对象和数组的混合 </h3>
+<p>{
+    a: {
+    one: 1,
+    two: 2,
+    three: 3
+    },
+    b: [ 1, 2, 3 ]
+    };</p>
+
+<p>-------------------------------------------</p>
+<p>{ a: { b: 1, c: 2 }, d: [ 3, 4, { e: 5 } ] }</p>
+<p>--------------------------------------------</p>
+<p>{ a: { b: 1, c: 2 }, d: [ 3, [ 1, 2, { f: 7 } ], { e: 5 } ]}</p>
+
+
+<p>-------------------------------------</p>
+<p>-------------------------------------</p>
+<p>-------------------------------------</p>
+<p>-------------------------------------</p>
+
+
+
+<h2>第三种   jquery object对象</h2>
+<form id="form">
+    <div><input type="text" name="a" value="1" id="a"></div>
+    <div><input type="text" name="b" value="2" id="b"></div>
+    <div><input type="hidden" name="c" value="3" id="c"></div>
+    <div>
+        <textarea name="d" rows="8" cols="40">4</textarea>
+    </div>
+    <div><select name="e">
+        <option value="5" selected="selected">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+    </select></div>
+    <div>
+        <input type="checkbox" name="f" value="8" id="f">
+    </div>
+    <div>
+        <input type="submit" name="g" value="Submit" id="g">
+    </div>
+</form>
+</body>
+</html>
